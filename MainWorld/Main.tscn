@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://MainWorld/tile_0048.png" type="Texture" id=2]
+[ext_resource path="res://MainWorld/Main.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Floor" type="Sprite" parent="."]
+position = Vector2( 171, 290 )
+scale = Vector2( 21, 3.9375 )
+texture = ExtResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Floor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/KinematicBody2D"]
+shape = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 176, 145 )
+scale = Vector2( 3, 3 )
