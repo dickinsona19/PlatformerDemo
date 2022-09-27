@@ -1,10 +1,10 @@
 extends KinematicBody2D
 
-const GRAVITY = 300.0
-var velocity = Vector2()
-const jump =500
-var canJump = false
-var coins =0
+const GRAVITY := 300.0
+var velocity := Vector2()
+const jump :=500
+var canJump := false
+var coins :=0
 
 
 # Called when the node enters the scene tree for the first time.

@@ -575,31 +575,35 @@ position = Vector2( 1075, 171 )
 scale = Vector2( 2, 2 )
 
 [node name="Coin5" parent="." instance=ExtResource( 5 )]
-position = Vector2( 489, 185 )
+position = Vector2( 499, 186 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 500, 80 )
 scale = Vector2( 2, 2 )
 
 [node name="Coin6" parent="." instance=ExtResource( 5 )]
 position = Vector2( -65, 176 )
 scale = Vector2( 2, 2 )
 
-[node name="platform" type="Sprite" parent="."]
-position = Vector2( -59.9064, 224 )
+[node name="platform3" type="Sprite" parent="."]
+position = Vector2( 500, 130 )
 rotation = -3.14159
 scale = Vector2( 6.14225, -1.81959 )
 texture = ExtResource( 6 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="platform"]
+[node name="KinematicBody2D" type="KinematicBody2D" parent="platform3"]
 position = Vector2( -0.436293, -3.4817 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platform/KinematicBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform3/KinematicBody2D"]
 position = Vector2( 0.446953, -1.38702 )
 scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 one_way_collision = true
 
-[node name="Area2D" type="Area2D" parent="platform"]
+[node name="Area2D" type="Area2D" parent="platform3"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platform/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform3/Area2D"]
 position = Vector2( 3.8147e-06, -4.94619 )
 scale = Vector2( 1, 1 )
 shape = SubResource( 5 )
@@ -849,5 +853,5 @@ shape = SubResource( 4 )
 [connection signal="body_entered" from="Floor/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="area_entered" from="Floor2/Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="body_entered" from="Floor2/Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="platform/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="platform3/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="platform2/Area2D" to="." method="_on_Area2D_body_entered"]
