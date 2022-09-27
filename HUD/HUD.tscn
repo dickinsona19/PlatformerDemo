@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://HUD/tile_0078.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="coinLabel" type="Label" parent="CanvasLayer"]
+margin_left = 12.0
+margin_top = 1.0
+margin_right = 52.0
+margin_bottom = 15.0
+text = " X 0"
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 6, 6 )
+texture = ExtResource( 1 )
